@@ -1,0 +1,36 @@
+
+.af-title {
+	display: flex;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 600;
+    border-bottom: 1px solid darkgray;
+    margin-bottom: 30px;
+}
+.add-form {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 1px 1px rgba(8,8,8,0.1);
+    color: #606060;
+    padding: 20px;
+}
+.custom_input, textarea {
+	border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 0 15px;
+}
+.custom_input {
+	height: 35px;
+    width: 50%;	
+}
+.w50 {
+    width: 50%;
+}
+input[type="file"] {
+    margin-left: 9.5%;
+    margin-top: 20px;
+}
+
+.bread-arrow {
+    margin: 0 15px;
+}

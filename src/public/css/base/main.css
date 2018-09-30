@@ -1,0 +1,123 @@
+
+body {
+	font-family: 'Fira Sans', sans-serif;
+	color: #202020;
+}
+a {
+	color: #202020 !important;
+	text-decoration: none !important;
+}
+.white {
+	color: white !important;
+}
+
+.admin_wrap {
+      display: flex;
+      flex-direction: row;
+}
+/* Left sidebar*/
+.control_panel {
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	width: 200px;
+	min-height: 100vh;
+	background: #141E30;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to top, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to top, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+/* Logo image container */
+.img_wrap {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 200px;
+	height: 70px;
+    border-bottom: 1px solid dimgray;	
+}
+/* Logo image on sidebar */
+.cp_img {
+	width: 50px;
+	height: 50px;
+}
+.cp_options {
+	width: 100%;
+	height: calc(100vh - 170px);
+    margin-top: 30px;	
+}
+.option-list-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	width: 100%;
+	height: 45px;
+	color: lightgray;
+}
+.option-list-item:hover {
+	background: rgba(8,8,8,0.2);
+	color: white;
+}
+
+/* Dashboard icon */
+.cp_item_icn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50px;
+    margin-left: 10px;
+}
+.cp_item_txt {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    width: 160px;
+    font-size: 17px;
+}
+
+.admin_page {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	left: 200px;
+    width: calc(100% - 200px);
+}
+.admin_top {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	height: 70px;
+	border-bottom: 1px solid lightgray;
+}
+.at-right, .at-left {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.at-right {
+	height: 100%;
+	margin-right: 50px;
+}
+.at-left {
+	height: 100%;
+	margin-left: 50px;
+}
+.breadcrumb-title {
+	font-size: 20px;
+    font-weight: 600;
+    font-style: italic;
+}
+.small_user_img {
+	width: 30px;
+	height: 30px;
+}
+
+.green_btn {
+	background: limegreen;
+	padding: 10px 40px;
+	box-shadow: inset 0 0 5px rgba(8,8,8,0.5);
+	border-radius: 15px;
+	font-weight: 600;
+	color: white !important;
+}

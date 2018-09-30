@@ -1,0 +1,27 @@
+{
+    "name": "sylain/cybertrail",
+    "description": "Customised admin panel for laravel applications",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "RajicDenis",
+            "email": "denis.rajic92@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "doctrine/dbal": "~2.3"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Sylain\\CyberTrail\\CyberTrailServiceProvider"
+            ],
+            "aliases": {
+                "Helper": "Sylain\\CyberTrail\\Helpers"
+            }
+        }
+    },
+
+}

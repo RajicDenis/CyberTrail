@@ -1,0 +1,88 @@
+.st-head, .st-name, .add_btn {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+.st-head {
+	padding-bottom: 50px;
+    border-bottom: 1px solid lightgray;
+}
+.st-name {
+	font-size: 20px;
+	font-weight: 600;
+	margin-left: 20px;
+}
+
+/* Table */
+#table-wrap {
+    margin-top: 70px;
+}
+#admin_table {
+	width: 100%;
+}
+#admin_table_wrapper {
+	display: block;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 1px 1px rgba(8,8,8,0.1);
+    color: #606060;
+}
+.col-sm-12, .col-sm-5, {
+    padding: 0;
+    margin: 0 0 0 15px !important;
+    margin-left: 15px;
+}
+.col-sm-12 {
+	margin-left: 15px;
+	padding: 0;
+}
+
+/* DataTable */
+tbody > tr {
+	height: 70px;
+}
+td {
+	padding: 5px !important;
+}
+td, th {
+	vertical-align: middle !important;
+    text-align: center;
+}
+#admin_table_length > label {
+	justify-content: flex-start;
+}
+#admin_table_filter > label {
+	justify-content: flex-end;
+}
+.input-sm {
+	margin: 0 10px;
+}
+.sorting {
+	padding-left: 5px;
+}
+.dataTables_length, .dataTables_info {
+    padding: 20px 20px 0 20px;
+}
+.dataTables_filter, .dataTables_paginate {
+	padding: 20px 0 20px 20px;
+}
+.dataTables_info {
+	padding-top: 40px !important; 
+}
+
+/* No data in table img */
+.excl-box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	border: 3px solid darkgray;
+}
+.excl-txt {
+	text-align: center;
+	font-size: 25px;
+	font-style: italic;
+	color: #6D6D6D;
+}

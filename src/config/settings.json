@@ -1,0 +1,20 @@
+{
+	"general": {
+		"theme": "light"
+	},
+	"tables": []
+}
+
+.admin_container {
+	background: #313941;
+	color: white;
+}
+
+#admin_table_wrapper {
+	background: #1C2F42;
+	color: white;
+}
+
+tr style=".." {
+	background: #313941;
+}
