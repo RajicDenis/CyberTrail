@@ -1,6 +1,6 @@
 <h1 align="center"><strong>CyberTrail</strong></h1>
 <p align="center"> 
-	<img src="public/images/leaf-icon.png">
+	<img src="src/public/images/leaf-icon.png">
 </p>
 
 ==================================================================================  
