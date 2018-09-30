@@ -1,8 +1,8 @@
-<h1 align="center"><strong>CyberLainMVC</strong></h1>
+<h1 align="center"><strong>CyberTrail</strong></h1>
 <p align="center"> 
 	<img src="public/images/leaf-icon.png">
 </p>
 
 ==================================================================================  
-<h3 align="center"><strong><em>Custom lightweight PHP MVC framework</em></strong></h3>
+<h3 align="center"><strong><em>Laravel Admin & READ System (Read, Edit, Add, & Delete)</em></strong></h3>
 ==================================================================================  
