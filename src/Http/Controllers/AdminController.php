@@ -54,7 +54,7 @@ class AdminController extends Controller
     }
 
     /**
-     * Show view with create form
+     * Show view with create or edit form
      * 
      * @param Request $request form request with new data
      */
@@ -188,8 +188,17 @@ class AdminController extends Controller
         // Select all tables from database
         $tables = DB::select('SHOW TABLES');
         $tables = array_map('current', $tables);
+        $allTables = [];
 
-        return $tables;
+        foreach($tables as $table) {
+
+            if(strpos($table, '_') == false) {
+                $allTables[] = $table;
+            }
+
+        }
+
+        return $allTables;
     }
 
     /**

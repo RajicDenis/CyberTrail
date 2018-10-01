@@ -16,11 +16,11 @@
 
 	</div>
 
-	@if(Session::has('success'))
+	@if(Session::has('status'))
 		<div class="center">
-			<div class="alert alert-success fade in">
+			<div class="alert {{ Session::get('alert_type') }} fade in">
 				<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-				{{ Session::get('success') }}
+				{{ Session::get('status') }}
 			</div>
 		</div>
 	@endif

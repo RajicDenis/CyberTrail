@@ -36,7 +36,7 @@
 
 				@foreach($tableName as $t)
 
-					@if($t != 'id')
+					@if($t != 'id' && $t != 'password')
 
 						<div class="form-group row">
 

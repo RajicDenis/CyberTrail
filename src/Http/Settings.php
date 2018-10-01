@@ -36,7 +36,7 @@ class Settings {
 
 		file_put_contents(dirname(__DIR__) .'/config/settings.json', $newJson);
 
-		Session::flash('success', 'Your configuration has been saved!');
+		Session::flash('status', 'Your configuration has been saved!');
 		Session::flash('alert_type', 'alert-success');
 
 		return redirect()->back();

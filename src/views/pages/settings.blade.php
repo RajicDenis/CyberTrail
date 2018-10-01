@@ -10,11 +10,11 @@
 
 	</div>
 
-	@if(Session::has('success'))
+	@if(Session::has('status'))
 		<div class="center">
-			<div class="alert alert-success fade in">
+			<div class="alert {{ Session::get('alert_type') }} fade in">
 				<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-				{{ Session::get('success') }}
+				{{ Session::get('status') }}
 			</div>
 		</div>
 	@endif
@@ -54,7 +54,7 @@
 					<i class="exclamation icon huge grey"></i>
 				</div>
 
-				<div class="excl-txt mt-5 fs18">Importing pivot tables is unneccessary since relationships are added automatically for every table</div>
+				<div class="excl-txt mt-5 fs18">Importing pivot tables is unnecessary since relationships are added automatically for every table</div>
 			</div>
 
 		</div>
