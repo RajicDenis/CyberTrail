@@ -3,6 +3,7 @@
 namespace Sylain\CyberTrail\Http\Controllers;
 
 use App\Http\Controllers\Controller as Controller;
+use Sylain\CyberTrail\Http\Settings as Settings;
 
 use Illuminate\Http\Request;
 use DB;
@@ -21,24 +22,9 @@ class AdminController extends Controller
     public function index() {
 
         // Get all table names
-        $tables = $this->getTables();
+        $tables = Settings::getTables();
 
-        // Loop through array and remove tables with underscore in their names
-        // Add the remaining table names to $featured array
-        $featured = array_filter($tables, function($value) {
-
-            if(strpos($value, '_') == false) {
-                return $value;
-            }
-
-        });
-
-        // Sort the $featured array
-        rsort($featured);
-
-        return view('CyberTrail::pages.dashboard')
-            ->withTables($tables)
-            ->withFeatured($featured);
+        return view('CyberTrail::pages.dashboard')->withTables($tables);
     }
 
     /**
@@ -49,7 +35,7 @@ class AdminController extends Controller
     public function showTable(Request $request) {
 
         // Get all table names
-        $tables = $this->getTables();
+        $tables = Settings::getTables();
 
         $selectedTable = $request->slug;
         $tbl = lcfirst($request->slug);
@@ -75,7 +61,7 @@ class AdminController extends Controller
     public function addToTable(Request $request) {
 
         // Get all table names
-        $tables = $this->getTables();
+        $tables = Settings::getTables();
 
         $selectedTable = $request->slug;
         $tbl = lcfirst($request->slug);
@@ -176,6 +162,23 @@ class AdminController extends Controller
     }
 
     /**
+     * Show settings page
+     */
+    public function settings() {
+
+        // Get all table names
+        $tables = Settings::getTables();
+
+        // Get all tables from json file
+        $jsonTables = $this->getTables();
+
+        return view('CyberTrail::pages.settings')
+            ->withTables($tables)
+            ->withJsonTables($jsonTables);
+
+    }
+
+    /**
      * Return all table names from the database
      *
      * @param string $exclude table name to exclude from search
@@ -185,9 +188,6 @@ class AdminController extends Controller
         // Select all tables from database
         $tables = DB::select('SHOW TABLES');
         $tables = array_map('current', $tables);
-
-        // Exclude selected tables from array
-        $tables = array_diff($tables, ['migrations', 'persistences', 'throttle', 'activations', 'reminders', $exclude]);
 
         return $tables;
     }

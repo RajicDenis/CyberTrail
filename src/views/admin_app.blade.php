@@ -22,6 +22,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/components/icon.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/components/button.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/components/form.min.css">
 
         <!-- DataTables -->
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -55,22 +56,32 @@
                         </div>
                     </a>
 
-                     <div class="option-list-item">
-                            <div class="cp_item_icn"><i class="table large icon"></i></div>
-                            <div class="cp_item_txt"><strong>Tables</strong></div>
-                        </div>
+                    <div class="option-list-item custom-border nohover">
+                        <div class="cp_item_icn"><i class="table large icon"></i></div>
+                        <div class="cp_item_txt"><strong>Tables</strong></div>
+                    </div>
+
+                    @if(count($tables) != 0)
+                        @foreach($tables as $table)
+                            
+                            <a href="{{ route('admin_showTable', ['slug' => $table]) }}">
+                                <div class="option-list-item">
+                                    <div class="cp_item_icn"></div>
+                                    <div class="cp_item_txt">{{ str_replace('_', ' ', ucfirst($table)) }}</div>
+                                </div>
+                            </a>
+
+                        @endforeach
+                    @else
+                        <div class="text-center mt-4"><i class="exclamation big icon white"></i></div>
+                    @endif
                     
-                    @foreach($tables as $table)
-
-                        <a href="{{ route('admin_showTable', ['slug' => $table]) }}">
-                            <div class="option-list-item">
-                                <div class="cp_item_icn"></div>
-                                <div class="cp_item_txt">{{ str_replace('_', ' ', ucfirst($table)) }}</div>
-                            </div>
-
-                        </a>
-
-                    @endforeach
+                    <a href="{{ route('admin_settings') }}">
+                        <div class="option-list-item mt-5 custom-border">
+                            <div class="cp_item_icn"><i class="code branch large icon"></i></div>
+                            <div class="cp_item_txt"><strong>Settings</strong></div>
+                        </div>
+                    </a>
     
                 <!-- END cp_options-->
                 </div>
@@ -117,6 +128,9 @@
         <!-- DataTables -->
         <script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
         <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
+        
+        <!-- Semantic ui forms -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/components/form.min.js"></script>
 
         <!-- SweetAlert js -->
         <script src="{{ URL::asset('CyberTrail/js/sweetalert.min.js') }}"></script>

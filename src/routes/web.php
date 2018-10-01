@@ -15,5 +15,16 @@ Route::group(['middleware' => 'web', 'namespace' => 'Sylain\CyberTrail\Http\Cont
 
 	Route::delete('admin/delete/{id}', 'AdminController@delete')->name('admin_delete');
 
+	Route::get('admin/settings', 'AdminController@settings')->name('admin_settings');
+
+	
+
 });
 
+Route::group(['middleware' => 'web', 'namespace' => 'Sylain\CyberTrail\Http'], function() {
+
+	Route::post('admin/addSettings', 'Settings@setTables')->name('admin_addSettings');
+
+	Route::get('admin/getTables', 'Settings@getTables')->name('admin_getTables');
+
+});
