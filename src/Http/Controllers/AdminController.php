@@ -198,7 +198,7 @@ class AdminController extends Controller
 
         }
 
-        return $allTables;
+        return $tables;
     }
 
     /**

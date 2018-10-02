@@ -29,14 +29,15 @@
 
 	@if(count($tableData) != 0)		
 		<table id="admin_table" class="table">
-
 			<thead>
 				<tr class="tbl-head" style="height: 50px; background: #EEF0F2;">
 
 					@foreach($tableName as $t)
 						<th>{{ strtoupper($t) }}</th>
 					@endforeach
+						@if(isset($tableData[0]->id))
 						<th></th>
+						@endif
 
 				</tr>
 			</thead>
@@ -56,6 +57,7 @@
 								<td><img style="width: 80px; height: 80px;" src="{{ asset($t->$tbl) }}"></td>
 							@endif
 						@endforeach
+							@if(isset($t->id))
 							<td style="text-align: right; width: 120px;">
 								<a href="{{ route('admin_addToTable', ['slug' => $selectedTable, 'pid' => $t->id]) }}" class="ui yellow basic button big"><i class="fas fa-pencil-alt"></i></a>
 								<form action="{{ route('admin_delete', $t->id) }}" method="POST" id="delete_form_{{ $t->id }}" style="display: none;">
@@ -65,7 +67,9 @@
 								</form>
 								<div class="ui red basic button big del" data-id='delete_form_{{ $t->id }}'><i class="fas fa-trash"></i></div>
 							</td>
+							@endif
 					</tr>
+
 				@endforeach
 			</tbody>		
 			

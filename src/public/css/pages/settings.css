@@ -1,0 +1,40 @@
+/* Custom checkbox */
+.form-group input[type="checkbox"] {
+    display: none;
+}
+
+.form-group input[type="checkbox"] + .btn-group > label span {
+    width: 20px;
+}
+
+.form-group input[type="checkbox"] + .btn-group > label span:first-child {
+    display: none;
+}
+.form-group input[type="checkbox"] + .btn-group > label span:last-child {
+    display: inline-block;   
+}
+
+.form-group input[type="checkbox"]:checked + .btn-group > label span:first-child {
+    display: inline-block;
+}
+.form-group input[type="checkbox"]:checked + .btn-group > label span:last-child {
+    display: none;   
+}
+.btn-lbl {
+	height: 34px;
+}
+.btn-lbl-2 {
+	width: 220px;
+}
+.check {
+	background-color: #0071B7 !important;
+	color: white !important;
+}
+
+.fs18 {
+	font-size: 18px;
+}
+.fixed-width {
+    width: 265px;
+}
+

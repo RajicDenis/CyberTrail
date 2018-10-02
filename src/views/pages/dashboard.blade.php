@@ -6,31 +6,14 @@
 		@if(count($tables) != 0)
 
 			@for($i=0; $i < count($tables); $i++)
-			
-			@if($i == 0)
-			<div class="fb" style="background-image: url('{{ URL::asset('CyberTrail/images/bg/users.jpg') }}')">
+						
+				<div class="fb" style="background-image: url('{{ URL::asset('CyberTrail/images/bg/red.jpg') }}')">
 				
-				<div class="fb-circle zi20"><i class="fas fa-users fa-3x"></i></div>
-
-			@elseif($i == 1)
-
-			<div class="fb" style="background-image: url('{{ URL::asset('CyberTrail/images/bg/office.jpg') }}')">
-				
-				<div class="fb-circle zi20"><i class="fas fa-book fa-3x"></i></div>
-
-			@elseif($i == 2)
-
-			<div class="fb" style="background-image: url('{{ URL::asset('CyberTrail/images/bg/office2.jpg') }}')">
-				
-				<div class="fb-circle zi20"><i class="fas fa-briefcase fa-3x"></i></div>
-
-			@endif
-
 				<div class="fb-title zi20">{{ ucfirst($tables[$i]) }}</div>
 
-				<div class="fb-desc zi20">You have {{ Helper::getTableCount($tables[$i]).' '.$tables[$i] }}  in your database. Click "View" to see all {{ $tables[$i] }}.</div>
+				<div class="fb-count">{{ Helper::getTableCount($tables[$i]) }}</div>
 
-				<a href="{{ route('admin_showTable', ['slug' => $tables[$i]]) }}" class="green_btn zi20">VIEW</a>
+				<a href="{{ route('admin_showTable', ['slug' => $tables[$i]]) }}" class="negative ui button huge zi20">VIEW</a>
 
 			</div>
 	

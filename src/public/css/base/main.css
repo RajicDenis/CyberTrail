@@ -10,6 +10,12 @@ a {
 .white {
 	color: white !important;
 }
+.custom-border {
+	border-top: 1px solid darkgray;
+}
+.nohover {
+	pointer-events: none;
+}
 
 .admin_wrap {
       display: flex;

@@ -54,7 +54,7 @@
 					<i class="exclamation icon huge grey"></i>
 				</div>
 
-				<div class="excl-txt mt-5 fs18">Importing pivot tables is unnecessary since relationships are added automatically for every table</div>
+				<div class="excl-txt mt-5 fs18">You can view and add data to pivot tables but you can't edit or delete from pivot tables! (for now)</div>
 			</div>
 
 		</div>
